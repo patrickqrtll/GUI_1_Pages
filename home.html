@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+  File:  ~pquarati/public_html/home.html
+  91.461 Assignment 3:  Styling Your First Web Page With CSS
+  Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+  Created on September 8th, 2015 at 11:24 PM
+  Home page with the index
+-->
+<html>
+    <!-- Header including a CSS reference -->
+    <head>
+        <title> Home - Quaratiello, Patrick </title>
+        <link rel="stylesheet" type="text/css" href="/~pquarati/css/MyCSS.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Nav Menu -->
+        <ul class = "navbar">
+            <li><a class = "selnavtext" href="home.html">Home</a></li>
+            <li><a class = "navtext" href="about.html">About</a></li>
+            <li><a class = "navtext" href="other.html">Other</a></li>
+        </ul>
+        &nbsp;
+        <div> Welcome to my home page. Here you can find a index of all my assignments for GUI Programming I. Feel free to browse the other pages.</div> 
+        &nbsp;
+        <!-- Index for links to future projects in GUI I -->
+        <table>
+            <caption class = "hindex"> GUI I Projects </caption>
+            <thead>
+                <tr class = "indexhead">
+                    <th class = "iheadtxt">Description:</th>
+                    <th class = "indexspace">&nbsp;</th>
+                    <th class = "iheadtxt">Link:</th>
+                </tr>
+            </thead>
+            <tbody class = "indexbody">
+                <tr>
+                    <td>This is just a test web page!</td>
+                    <td> &nbsp; </td>
+                    <td><a href="test_page.html"> Test Page </a></td>
+                </tr>
+                <tr>                    
+                    <td>test row 1</td>
+                    <td> &nbsp; </td>
+                    <td> A link should be here </td>
+                </tr>
+                <tr>                    
+                    <td>test row 2 </td>
+                    <td> &nbsp; </td>
+                    <td> A link should be here too! </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
