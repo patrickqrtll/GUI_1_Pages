@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+    File:  ~/public_html/multTable.html
+    91.461 Assignment 6:  Creating an Interactive Dynamic Table
+    Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+    Created on October 17, 2015 at 11:30 PM
+    Dynamic Multiplication Table
+
+ Found some help from https://css-tricks.com/complete-guide-table-element/
+ as well as http://www.w3schools.com/css/css_howto.asp
+-->
+<html>
+    <head>
+        <title>Multiplication Table</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/multTableCSS.css">
+        <script type="text/javascript">
+            function buildTable() {
+                var mplier1 = parseInt(frm.t1.value);     // convert first field to a number
+                var mplier2 = parseInt(frm.t2.value);     // convert second field to a number 
+                var mplicand1 = parseInt(frm.t3.value);     // convert first field to a number
+                var mplicand2 = parseInt(frm.t4.value);     // convert second field to a number
+                var error = [false, false, false, false];
+
+                var strMultTable = "";
+
+                //Do some paramater checking. Is it a number?
+                if (isNaN(mplier1))
+                    error[0] = true;
+                if (isNaN(mplier2))
+                    error[1] = true;
+                if (isNaN(mplicand1))
+                    error[2] = true;
+                if (isNaN(mplicand2))
+                    error[3] = true;
+                   
+                //Error messages - not a number in field!
+                if (error[0] === true)
+                    strMultTable += "<div class=\"errMsg\">There is an error with columns field 1! Fields must be a number!<div>";
+                if (error[1] === true)
+                    strMultTable += "<div class=\"errMsg\">There is an error with columns field 2! Fields must be a number!<div>";
+                if (error[2] === true)
+                    strMultTable += "<div class=\"errMsg\">There is an error with rows field 1! Fields must be a number!<div>";
+                if (error[3] === true)
+                    strMultTable += "<div class=\"errMsg\">There is an error with rows field 2! Fields must be a number!<div>";
+                   
+                //Are ALL fields numbers - if not, we don't show table.
+                if (error[0] === false && error[1] === false && error[2] === false && error[3] === false)
+                {
+                    //All numbers passed - check order. If numbers are not ordered right fix it.
+                    if (mplier1 > mplier2)
+                    {
+                        var temp = mplier2;
+                        mplier2 = mplier1;
+                        mplier1 = temp;
+                    }
+
+                    if (mplicand1 > mplicand2)
+                    {
+                        var temp = mplicand2;
+                        mplicand2 = mplicand1;
+                        mplicand1 = temp;
+                    }
+                     
+                    //Done checking - make table
+                    
+                    strMultTable += "<div>";
+                    strMultTable += "<table class=\"multTable\">";
+                    strMultTable += "<tbody>";
+                    strMultTable += "<tr class=\"multiplier\">";
+                    strMultTable += "<td class = \"empty\">&nbsp;</td>"; //space to help make it readable
+                    strMultTable += "<td class = \"empty\">&nbsp;</td>"; //space to help make it readable
+                    strMultTable += "<td class = \"empty\">&nbsp;</td>"; //space to help make it readable
+                    //Build the top "head" row - These are the multipliers
+                    for (var cols = mplier1; cols <= mplier2; cols++)
+                    {
+                        strMultTable += "<td>" + cols + "</td>";
+                        strMultTable += "<td>&nbsp;</td>";
+                    }
+                    strMultTable += "</tr>";
+                    //Head done - now build body
+                   
+                    for (var dataRows = mplicand1; dataRows <= mplicand2; dataRows++)
+                    {
+                        //First column for each row is the multiplicand
+                        strMultTable += "<tr>";
+                        strMultTable += "<td class=\"multiplicand\">&nbsp;</td>"; 
+                        strMultTable += "<td class=\"multiplicand\">" + dataRows + "</td>";
+                        strMultTable += "<td class=\"multiplicand\">&nbsp;</td>"; //space to help make it readable
+                        //The rest of the rows contain the data
+                        for (var dataCols = mplier1; dataCols <= mplier2; dataCols++)
+                        {
+                            strMultTable += "<td>" + ((dataRows) * dataCols) + "</td>"; //Multiply is done here
+                            strMultTable += "<td>&nbsp;</td>"; //space to help make it readable                      
+                        }
+                        strMultTable += "</tr>";
+                    }
+                    strMultTable += "</tbody>";
+                    strMultTable += "</table>";
+                    strMultTable += "</div>";
+                }
+                //All build - send it off to our multiTable id down below.
+                $("#multTable").html(strMultTable);
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>
+            <form id="frm" action="javascript:void(0)" onsubmit="return buildTable();">   
+                <!-- input fields -->
+                <p>  <!-- required for XHTML -->
+                    Columns from <input type="text" id="t1" size="5" tabindex="1" /> to
+                    <input type="text" id="t2" size="5" tabindex="2" /> 
+                </p>
+                <p>
+                    Rows from <input type="text" id="t3" size="5" tabindex="3" /> to
+                    <input type="text" id="t4" size="5" tabindex="4" /> 
+                    <!-- action button -->
+                </p>
+                <p>
+                    <input type="submit" value="Build Table" tabindex="3" />
+                </p>                
+            </form>
+        </div> 
+        <!-- dynamic table -->
+        <div id = "multTable"> </div>
+        <p class = "textcenter" ><a href="home.html">Return to home</a>
+    </body>
+</html>

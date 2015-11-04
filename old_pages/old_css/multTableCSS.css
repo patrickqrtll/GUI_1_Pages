@@ -1,9 +1,8 @@
 /* 
     File:  ~/public_html/css/multTableCSS.css
-    91.461 Assignment 7:  Using the jQuery Validation Plugin with Your Dynamic Table
+    91.461 Assignment 6:  Creating an Interactive Dynamic Table
     Author     : Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
     Created on October 17, 2015 at 1:30 PM
-    Edited on November 1st, 6 PM
     CSS to help design the multiplication table
 
  Found some help from https://css-tricks.com/complete-guide-table-element/
@@ -11,22 +10,8 @@
 
 */
 
-input.error {
-   border:2px solid red;
-}
+/* Center some text */
 
-/* Error text is red */
-#errorBox{
-    color: red;
-}
-
-/* Subheaders for Columns are Rows */
-.subhead{
-    color:green;
-    font-weight: bold;
-}
-
-/*Center some text */
 .textcenter{
     text-align: center; 
 }
