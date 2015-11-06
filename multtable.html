@@ -5,6 +5,7 @@
     Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
     Created on October 17, 2015 at 11:30 PM
     Edited on November 1st, 6PM
+    Edited on November 6th, 12:06 PM
     Dynamic Multiplication Table
 -->
 <html>
@@ -14,18 +15,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
         <script src="js/jquery.validation/jquery.validate.js"></script>
+         <script src="js/valMultTable.js"></script>
         <script src="js/JQVaddedMethods.js"></script>
         <script src="js/valMultTable.js"></script>
         <script src="js/buildTable.js"></script>
         <link rel="stylesheet" type="text/css" href="css/multTableCSS.css">
         <script type="text/javascript">
-
-            //Call validate, check if valid is true, then build table
+            validateForm();
             var validateAndBuild = function () {
-                if (validateForm())
-                    buildTable();
-            }
-
+                $(document).ready(function () {
+                    if ($("#frm").valid())
+                        buildTable();
+                });
+            };
         </script>
     </head>
     <body>        

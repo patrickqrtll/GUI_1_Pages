@@ -9,7 +9,7 @@
 //Greater than and less than - help from 
 //http://stackoverflow.com/questions/29451507/how-to-use-jquery-validator-to-determine-value-of-one-field-is-greater-than-anot
 
-jQuery.validator.addMethod("greaterThan",
+jQuery.validator.addMethod("greaterThanOrEqual",
         function (value, element, param) {
             if ($(param).val() === "")
                 return true; //We don't want an error when the other field isn't filled in yet!
@@ -18,7 +18,7 @@ jQuery.validator.addMethod("greaterThan",
             return parseFloat(value, 10) >= (parseFloat($(param).val(), 10));
         }, 'Must be greater than other element!');
 
-jQuery.validator.addMethod("lessThan",
+jQuery.validator.addMethod("lessThanOrEqual",
         function (value, element, param) {
             if ($(param).val() === "")
                 return true;
