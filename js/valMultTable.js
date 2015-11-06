@@ -21,6 +21,7 @@ var validateForm = function () {
                 t1: {
                     "required": true,
                     "number": true,
+                    "lessThanOrEqual": "#t2",
                     "range": [-999,999]           
                 },
                 t2: {
@@ -32,6 +33,7 @@ var validateForm = function () {
                 t3: {
                     "required": true,
                     "number": true,
+                    "lessThanOrEqual": "#t4",
                     "range": [-999,999]
                 },
                 t4: {
@@ -47,6 +49,7 @@ var validateForm = function () {
                 t1: {
                     required: "Field \"First Column\" is required!",
                     number: "Please enter a valid number in field \"First Column\"!",
+                    lessThanOrEqual: "\"First Column\" must be less than or equal to \"Last Column\"",
                     range: "Value must be between less than 1000 and greater than -1000"
                 },
                 t2: {
@@ -58,6 +61,7 @@ var validateForm = function () {
                 t3: {
                     required: "Field \"First Row\" is required!",
                     number: "Please enter a valid number in field \"First Row\"!",
+                    lessThanOrEqual: "\"First Row\" must be less than or equal to \"Last Row\"",
                     range: "Value must be between less than 1000 and greater than -1000"
                 },
                 t4: {
