@@ -1,6 +1,6 @@
 /* 
  File:  ~/public_html/js/buildTable.js
- 91.461 Assignment 8:  Using the jQuery UI Slider and Tab Widgets
+ 91.461 Assignment 7:  Using the jQuery Validation Plugin with Your Dynamic Table
  Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
  Created on October 1, 2015 at 8:08 PM
  Builds HTML for dynamic multiplication table. Check valMultTable.js for validation.
@@ -8,7 +8,7 @@
 
 
 //Build table
-function buildTable( tabNum ) {
+function buildTable() {
 
     var mplier1 = parseInt(frm.t1.value);     // convert first field to a number
     var mplier2 = parseInt(frm.t2.value);     // convert second field to a number 
@@ -53,7 +53,7 @@ function buildTable( tabNum ) {
     strMultTable += "</div>";
 
     //All build - send it off to our multiTable id down below.
-    $("#multTable-" + tabNum).html(strMultTable);
+    $("#multTable").html(strMultTable);
 }
 
 

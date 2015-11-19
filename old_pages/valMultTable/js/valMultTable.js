@@ -1,6 +1,6 @@
 /* 
  File:  ~/public_html/js/valMultTable.js
- 91.461 Assignment 8:  Using the jQuery UI Slider and Tab Widgets
+ 91.461 Assignment 7:  Using the jQuery Validation Plugin with Your Dynamic Table
  Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
  Created on October 1, 2015 at 8:01 PM
  Edited on November 6th, 12:06 PM
@@ -16,31 +16,31 @@ var validateForm = function () {
     });
 
     $().ready(function () {
-        validator = $("#frm").validate({
+        $("#frm").validate({
             rules: {
                 t1: {
                     "required": true,
                     "number": true,
                     "lessThanOrEqual": "#t2",
-                    "range": [-999, 999]
+                    "range": [-999,999]           
                 },
                 t2: {
                     "required": true,
                     "number": true,
                     "greaterThanOrEqual": "#t1",
-                    "range": [-999, 999]
+                    "range": [-999,999]
                 },
                 t3: {
                     "required": true,
                     "number": true,
                     "lessThanOrEqual": "#t4",
-                    "range": [-999, 999]
+                    "range": [-999,999]
                 },
                 t4: {
                     "required": true,
                     "number": true,
                     "greaterThanOrEqual": "#t3",
-                    "range": [-999, 999]
+                    "range": [-999,999]
                 }
             },
             errorLabelContainer: '#errorBox',
@@ -72,5 +72,5 @@ var validateForm = function () {
                 }
             }
         });
-    });
+    });     
 };

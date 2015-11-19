@@ -1,6 +1,6 @@
 /* 
     File:  ~/public_html/css/multTableCSS.css
-    91.461 Assignment 8:  Using the jQuery UI Slider and Tab Widgets
+    91.461 Assignment 7:  Using the jQuery Validation Plugin with Your Dynamic Table
     Author     : Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
     Created on October 17, 2015 at 1:30 PM
     Edited on November 1st, 6 PM
@@ -11,18 +11,12 @@
 
 */
 
-.ui-slider-horizontal {
-    height: 8px;
-    width: 170px;
-}
-
 input.error {
    border:2px solid red;
 }
 
 /* Error text is red */
 #errorBox{
-
     color: red;
 }
 

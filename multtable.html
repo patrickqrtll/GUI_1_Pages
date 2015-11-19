@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <!--
     File:  ~/public_html/multTable.html
-    91.461 Assignment 7:  Using the jQuery Validation Plugin with Your Dynamic Table
+    91.461 Assignment 8:  Using the jQuery UI Slider and Tab Widgets
     Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
     Created on October 17, 2015 at 11:30 PM
     Edited on November 1st, 6PM
     Edited on November 6th, 12:06 PM
+    Edited on November 18th - Added UI slider and tabs
     Dynamic Multiplication Table
 -->
 <html>
@@ -13,53 +14,108 @@
         <title>Multiplication Table</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>      
         <script src="js/jquery.validation/jquery.validate.js"></script>
-         <script src="js/valMultTable.js"></script>
-        <script src="js/JQVaddedMethods.js"></script>
+        <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script> 
         <script src="js/valMultTable.js"></script>
+        <script src="js/JQVaddedMethods.js"></script>
+        <script src="js/JQUISliders.js"></script>
         <script src="js/buildTable.js"></script>
+        <script src="js/multTableTab.js"></script>
         <link rel="stylesheet" type="text/css" href="css/multTableCSS.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4/jquery-ui.theme.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.4/jquery-ui.css">
         <script type="text/javascript">
-            validateForm();
-            var validateAndBuild = function () {
-                $(document).ready(function () {
-                    if ($("#frm").valid())
-                        buildTable();
-                });
-            };
+
+            validateForm(); //Create Validate 
+         
         </script>
     </head>
     <body>        
-        <div>
-            <form name = "frm" id="frm" action="javascript:void(0)" onsubmit="return validateAndBuild();">   
-                <!-- input fields -->
-                <p class = "subhead">
-                    Columns from:
-                </p>
-                <p>
-                    First Column: <input type="text" id="t1" name="t1" tabindex="1" />
-                </p>
-                <p>
-                    Last Column: <input type="text" id="t2" name="t2"  tabindex="2" /> 
-                </p>
-                <p class = "subhead">
-                    Rows from:
-                </p>
-                <p>
-                    First Row:<input type="text" id="t3" name="t3"  tabindex="3" />
-                </p>
-                <p>
-                    Last Row: <input type="text" id="t4" name="t4"  tabindex="4" /> 
-                </p>
-                <p> <!-- action button -->
-                    <input type="submit" value="Build Table" tabindex="3" />
-                </p>                
-            </form>
-        </div>         
-        <div id = "errorBox"> </div>
-        <!-- dynamic table -->       
-        <div id = "multTable"> </div>
+        <form name = "frm" id="frm" action="javascript:void(0)">
+            <table class = "inputTable">                    
+                <tr>
+                    <td class = "subhead"> Columns from: </td>
+                    <td>&nbsp;</td>
+                    <td class = "subhead"> Rows from: </td>
+                    <td>&nbsp;</td>
+                    <td class = "subhead">Remove tabs:</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>First Column:</td>
+                    <td>&nbsp;</td>
+                    <td>First Row:</td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" id="t5" name="t5" tabindex="7" /> </td>
+                    <td> to </td>
+                    <td><input type="text" id="t6" name="t6" tabindex="8" /> </td>
+                </tr>
+                <tr>
+                    <td><div id="slider1" style="width: 170px;"></div></td>
+                    <td>&nbsp;</td>
+                    <td><div id="slider3" style="width: 170px;"></div></td>
+                    <td>&nbsp;</td>
+                    <td rowspan="10" colspan="3"><div id = "errorBox"> </div></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="t1" name="t1" tabindex="1" /> </td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" id="t3" name="t3" tabindex="3" /> </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>Last Column:</td>
+                    <td>&nbsp;</td>
+                    <td>Last Row:</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><div id="slider2" style="width: 170px;"></div></td>
+                    <td>&nbsp;</td>
+                    <td><div id="slider4" style="width: 170px;"></div></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="t2" name="t2" tabindex="2" /> </td>
+                    <td>&nbsp;</td>
+                    <td><input type="text" id="t4" name="t4" tabindex="4" /> </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <p> <!-- action button -->
+                <input type="submit" value="Build Table" tabindex="5" />
+            </p>
+        </form>       
+        <button id="removeTabs">Remove Tabs</button>
+        <div> &nbsp; </div>
+        <div id="tabs">
+            <ul>
+
+            </ul>
+            <div id="tabs-1">
+            </div>
+        </div>    
+        <!-- dynamic table --> 
         <p class = "textcenter" ><a href="home.html">Return to home</a>
     </body>
 </html>

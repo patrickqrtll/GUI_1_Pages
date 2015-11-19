@@ -1,6 +1,6 @@
 /* 
  File:  ~/public_html/js/JQVaddedMethods.js
- 91.461 Assignment 8:  Using the jQuery UI Slider and Tab Widgets
+ 91.461 Assignment 7:  Using the jQuery Validation Plugin with Your Dynamic Table
  Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
  Created on October 1, 2015 at 7:57 PM
  Functions added to JQuery Validator Plugin with addMethod
