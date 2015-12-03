@@ -40,9 +40,6 @@ scrabbleTiles["_"] = {"value": 0, "original-distribution": 2, "number-remaining"
 
 
 var scrabbleSum = 0;
-$('.scrabbleScore').html(scrabbleSum);
-
-
 
 function errorMessage(intErrorNum)
 {
@@ -86,6 +83,7 @@ function getRandomInt(min, max) {
 
 $(document).ready(function () {
 
+    $('.scrabbleScore').html(scrabbleSum);
     for (var i = 1; i <= 7; i++)
     {
         var letterAscii = getRandomInt(65, 91); // FIX THIS, should be 90 when all letters are added!!!!
