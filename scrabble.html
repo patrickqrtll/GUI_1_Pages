@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+        <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script> 
+        <script src="js/scrabbleJS.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/scrabbleCSS.css">
+        <title>Scrabble</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class = "errorBox"> &nbsp; </div>
+        <p> &nbsp; </p>
+        <table class = "scrabbleBoard">
+            <caption> Board </caption>
+            <tbody >
+                <tr>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div> &nbsp; </div>
+        <div> Score </div>
+        <div class = "scrabbleScore"></div>
+        <div> &nbsp; </div>
+        <button type="button" onclick = "getNewLetters()">Get new letters!</button>
+        <button type="submit" onclick = "errorMessage()">Submit Word</button>
+        <table class = "letterHolder">
+            <caption> Letters </caption>
+            <tbody >
+                <tr>
+                    <td class = "holderSpace"> <img id = "letter-1" src="" alt="error" width="59" height="59"> </td>
+                    <td class = "holderSpace"> <img id = "letter-2" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-3" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-4" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-5" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-6" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-7" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"></td>
+                    <td class = "holderSpace"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<img src="images/scrabble_center_row.png" alt="scrabble_center_row.png" style="width:1129px;height:89px;"> -->
+        <br>
+    </body>
+</html>
