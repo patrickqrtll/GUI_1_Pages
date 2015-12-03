@@ -38,7 +38,6 @@ scrabbleTiles["Y"] = {"value": 4, "original-distribution": 2, "number-remaining"
 scrabbleTiles["Z"] = {"value": 10, "original-distribution": 1, "number-remaining": 1, image: "images/scrabbleLetterZ.png"};
 scrabbleTiles["_"] = {"value": 0, "original-distribution": 2, "number-remaining": 2, image: "images/scrabbleLetter_.png"};
 
-
 var scrabbleSum = 0;
 
 function errorMessage(intErrorNum)
@@ -73,6 +72,7 @@ function getNewLetters()
 
         document.getElementById("letter-" + i).src = scrabbleTiles[letterChar].image;
         scrabbleSum = 0; // reset for now, score gets messed up if you get new letters.
+        $('.scrabbleScore').html(scrabbleSum);
         errorMessage(0);
     }
 }
