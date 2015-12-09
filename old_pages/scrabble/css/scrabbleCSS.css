@@ -27,12 +27,11 @@ and open the template in the editor.
     color: black;
     width:1129px;
     height:89px;
-    background-color: black; 
+    background-color: black; /* Light Grey */
     background: url(../images/scrabble_center_row.png);
 }
 
-[class^='boardSpace']
-{
+.boardSpace{
         /*background-color: #F5F5F5; /* Light Grey */
         table-layout: fixed;
         padding: 0px;
@@ -48,16 +47,10 @@ and open the template in the editor.
     height: 96px;
     background: url(../images/small_scrabble_holder.png);
 }
-[class^='holderSpace-']
+.holderSpace
 {
         /*background-color: #F5F5F5; /* Light Grey */
         text-align: center;
         table-layout: fixed;
-}
-
-#version
-{
-    color: #C0C0C0; /* Light Grey */
-    text-align: center;
 }
 

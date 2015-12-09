@@ -8,71 +8,60 @@ and open the template in the editor.
     <head>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
         <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script> 
-        <script src="js/scrabbleTilesJS.js"></script>
-        <script src="js/scrabbleUtilsJS.js"></script>
-        <script src="js/scrabbleMovementJS.js"></script>
+        <script src="js/scrabbleJS.js"></script>
         <link rel="stylesheet" type="text/css" href="css/scrabbleCSS.css">
         <title>Scrabble</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class = "errorBox"></div>
-        <!---<input type="checkbox" name="debug" id = "debug" value="debug" onchange="toggleDebug()">Debug<br> --->
-        <p> &nbsp; </p>
+        <div class = "errorBox"> &nbsp; </div>
         <p> &nbsp; </p>
         <table class = "scrabbleBoard">
             <caption> Board </caption>
             <tbody >
                 <tr>
-                    <td class = "boardSpaceTW"></td>
-                    <td class = "boardSpace"></td>
-                    <td class = "boardSpace"></td>
-                    <td class = "boardSpaceDL"></td>
                     <td class = "boardSpace"></td>
                     <td class = "boardSpace"></td>
                     <td class = "boardSpace"></td>
-                    <td class = "boardSpaceCR"></td>
                     <td class = "boardSpace"></td>
                     <td class = "boardSpace"></td>
                     <td class = "boardSpace"></td>
-                    <td class = "boardSpaceDL"></td>
                     <td class = "boardSpace"></td>
                     <td class = "boardSpace"></td>
-                    <td class = "boardSpaceTW"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
                 </tr>
             </tbody>
         </table>
         <div> &nbsp; </div>
-        <div> Total Score </div>
+        <div> Score </div>
         <div class = "scrabbleScore"></div>
         <div> &nbsp; </div>
-        <div> Your word: </div>
-        <div class = "currentWord"></div>
-        <div> &nbsp; </div>
-        <div> Current word points: </div>
-        <div class = "wordScore"></div>
-        <div> &nbsp; </div>
-        <button type="button" onclick = "buildPieces()">Get new letters!</button>
-        <button type="submit" onclick = "submitWord()">Submit Word</button>
+        <button type="button" onclick = "getNewLetters()">Get new letters!</button>
+        <button type="submit" onclick = "errorMessage()">Submit Word</button>
         <table class = "letterHolder">
             <caption> Letters </caption>
             <tbody >
                 <tr>
-                    <td class = "holderSpace-1"></td>
-                    <td class = "holderSpace-2"></td>
-                    <td class = "holderSpace-3"></td>
-                    <td class = "holderSpace-4"></td>
-                    <td class = "holderSpace-5"></td>
-                    <td class = "holderSpace-6"></td>
-                    <td class = "holderSpace-7"></td>
+                    <td class = "holderSpace"> <img id = "letter-1" src="" alt="error" width="59" height="59"> </td>
+                    <td class = "holderSpace"> <img id = "letter-2" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-3" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-4" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-5" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-6" src="" alt="error" width="59" height="59"></td>
+                    <td class = "holderSpace"> <img id = "letter-7" src="" alt="error" width="59" height="59"></td>
                     <td class = "holderSpace"></td>
                     <td class = "holderSpace"></td>
                 </tr>
             </tbody>
         </table>
+        <!--<img src="images/scrabble_center_row.png" alt="scrabble_center_row.png" style="width:1129px;height:89px;"> -->
         <br>
-        <div> &nbsp; </div>
-        <div id="version"> Version 0.4 </div>
     </body>
 </html>
