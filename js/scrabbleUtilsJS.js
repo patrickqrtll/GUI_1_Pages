@@ -154,10 +154,15 @@ function submitWord()
         var letter;
         var arrayLetterId = [];
         console.log("Word Submitted!"); // for debugging
+        if(tripleWordFlag)
+            scrabbleSum += tripleWordSum;
+        else
+            scrabbleSum += wordSum;
         arrayLetters = strWord.split(""); // store what letters are in play
         strWord = "---"; //set word to blank
+        console.log(wordSum);
         scrabbleSum += wordSum; // add to score
-
+        
         $('.scrabbleScore').html(scrabbleSum); //update UI
         $('.wordScore').html(wordSum);
         $('.currentWord').html(strWord);
@@ -168,7 +173,6 @@ function submitWord()
         for (var i = 0; i < arrayLetters.length; i++)
         {
             scrabbleTiles[arrayLetters[i]].numberRemaining -= 1;
-            console.log(scrabbleTiles[arrayLetters[i]].numberRemaining);
         }
         $(".inPlay").addClass("submitted"); // if the word is now "submitted"
         $(".submitted").removeClass("inPlay");
