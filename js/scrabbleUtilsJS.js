@@ -154,14 +154,13 @@ function submitWord()
         var letter;
         var arrayLetterId = [];
         console.log("Word Submitted!"); // for debugging
+        
         if(tripleWordFlag)
             scrabbleSum += tripleWordSum;
         else
             scrabbleSum += wordSum;
         arrayLetters = strWord.split(""); // store what letters are in play
         strWord = "---"; //set word to blank
-        console.log(wordSum);
-        scrabbleSum += wordSum; // add to score
         
         $('.scrabbleScore').html(scrabbleSum); //update UI
         $('.wordScore').html(wordSum);
