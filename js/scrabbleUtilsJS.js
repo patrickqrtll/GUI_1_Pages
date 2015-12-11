@@ -1,7 +1,9 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+    File:  ~/public_html/js/scrabbleUtilsJS.html
+    91.461 Assignment 9:  Scrabble
+    Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+    Created on November 29th 2015
+    Scrabble Utilities
  */
 
 //Globals
