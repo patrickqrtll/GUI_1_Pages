@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    File:  ~/public_html/scrabble.html
+    91.461 Assignment 9:  Scrabble
+    Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+    Created on November 29th 2015
+    Scrabble HTML
+-->
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>  
+        <script src="js/jquery-ui-1.11.4/jquery-ui.js"></script> 
+        <script src="js/scrabbleTilesJS.js"></script>
+        <script src="js/scrabbleUtilsJS.js"></script>
+        <script src="js/scrabbleMovementJS.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/scrabbleCSS.css">
+        <title>Scrabble</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class = "errorBox"></div>
+        <p> &nbsp; </p>
+        <p> &nbsp; </p>
+        <table class = "scrabbleBoard">
+            <caption> Board </caption>
+            <tbody >
+                <tr>
+                    <td class = "boardSpaceTW"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpaceDL"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpaceCR"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpaceDL"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpace"></td>
+                    <td class = "boardSpaceTW"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div> &nbsp; </div>
+        <div> Total Score </div>
+        <div class = "scrabbleScore"></div>
+        <div> &nbsp; </div>
+        <div> Your word: </div>
+        <div class = "currentWord"></div>
+        <div> &nbsp; </div>
+        <div> Current word points: </div>
+        <div class = "wordScore"></div>
+        <div> &nbsp; </div>
+        <button type="button" onclick = "buildPieces()">Get new letters!</button>
+        <button type="submit" onclick = "submitWord()">Submit Word</button>
+        <table class = "letterHolder">
+            <caption> Letters </caption>
+            <tbody >
+                <tr>
+                    <td class = "holderSpace-1"></td>
+                    <td class = "holderSpace-2"></td>
+                    <td class = "holderSpace-3"></td>
+                    <td class = "holderSpace-4"></td>
+                    <td class = "holderSpace-5"></td>
+                    <td class = "holderSpace-6"></td>
+                    <td class = "holderSpace-7"></td>
+                    <td class = "holderSpace"></td>
+                    <td class = "holderSpace"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div> &nbsp; </div>
+        <div id="version"> Version 0.6 </div>
+    </body>
+</html>

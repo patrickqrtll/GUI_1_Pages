@@ -1,0 +1,90 @@
+/* 
+    File:  ~/public_html/css/MyCSS.html
+    91.461 Assignment 3:  Styling Your First Web Page With CSS 
+    Author     : Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+    Created on Sepember 8th, 2015 at 11:54 PM
+    Modified on September 16th, 10:34 PM
+    Modified on September 21st, 5:49 PM
+    This is some basic CSS to make the table in the index look a little nicer.
+
+ Found some help from https://css-tricks.com/complete-guide-table-element/
+ as well as http://www.w3schools.com/css/css_howto.asp
+
+*/
+
+/*Center some text */
+
+.textcenter{
+    text-align: center; 
+}
+
+/* This is the CSS for the navbar on all pages excluding the text formating */
+
+.navbar{
+    float: left;
+    list-style-type: none;
+    margin-right: 10pt;
+    padding: 0;
+    overflow: hidden;
+    background-color: #A00000; /* Red */
+}
+
+/* This is the text formating for the navbar */
+
+.navtext{
+    display: block;
+    width: 80pt;
+    color: white;
+    text-align: center;
+    padding: 10pt;
+    text-decoration: none;
+    font-size: 15pt;
+    border-bottom: 2pt solid white;
+    font-variant: small-caps
+}
+
+/* This is the header for the index on the home page */
+
+.hindex{
+    font-size: 15pt;
+    color: #380000; /* Dark Red */
+    font-weight: bold; 
+}
+/* This is the text formating for the SELECTED navbar */
+
+.selnavtext{
+    display: block;
+    width: 80pt;
+    color: white;
+    text-align: center;
+    padding: 10pt;
+    text-decoration: none;
+    font-size: 17pt;
+    font-weight: bold;
+    border-bottom: 2pt solid white;
+    background-color: #380000; /* Dark Red */
+    font-variant: small-caps
+}
+
+/* Format index table */
+.indexhead 
+{
+    background: #380000; /* Dark Red */
+    color: white;
+    font-size: 13pt;
+}
+
+/* Add "zebra stripes" to index table */
+.indexbody tr:nth-child(even){
+    background-color: #DCDCDC; /* Grey */
+}
+
+/* Add whitespace to index table */
+.indexspace{
+    background: white;
+}
+
+/* Add whitespace BACK to columns */
+.indexbody td:nth-child(even){
+    background-color: white;
+}

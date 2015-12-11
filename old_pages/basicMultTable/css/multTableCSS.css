@@ -1,0 +1,51 @@
+/* 
+    File:  ~/public_html/css/multTableCSS.css
+    91.461 Assignment 6:  Creating an Interactive Dynamic Table
+    Author     : Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+    Created on October 17, 2015 at 1:30 PM
+    CSS to help design the multiplication table
+
+ Found some help from https://css-tricks.com/complete-guide-table-element/
+ as well as http://www.w3schools.com/css/css_howto.asp
+
+*/
+
+/* Center some text */
+
+.textcenter{
+    text-align: center; 
+}
+
+/* for rows */
+.multiplicand{
+    font-weight: bold;
+    color: blue;
+    background: #C0C0C0; /* Medium Grey */
+    text-align: center;
+}
+
+/* for cols */
+.multiplier{
+    color: red;
+    font-weight: bold;
+    background: #C0C0C0; /* Medium Grey */
+    text-align: center;
+}
+
+.multTable{
+    
+    background-color: #F5F5F5; /* Light Grey */
+    border-color: white;
+    border-spacing: 0px;
+}
+
+/* for white spaces */
+.empty
+{
+    background-color: white;
+}
+
+.errMsg
+{
+    color: red;
+}

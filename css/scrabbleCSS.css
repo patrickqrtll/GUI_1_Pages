@@ -1,0 +1,63 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 1, 2015, 8:16:01 PM
+    Author     : Patrick
+*/
+
+.errorBox
+{
+    color: red;
+}
+
+#div1 
+{
+    width:350px;
+    height:70px;
+    padding:10px;
+    border:1px solid #aaaaaa;
+}
+
+.scrabbleBoard
+{
+    table-layout: fixed;
+    color: black;
+    width:1129px;
+    height:89px;
+    background-color: black; 
+    background: url(../images/scrabble_center_row.png);
+}
+
+[class^='boardSpace']
+{
+        /*background-color: #F5F5F5; /* Light Grey */
+        table-layout: fixed;
+        padding: 0px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+}
+
+.letterHolder
+{
+    table-layout: fixed;
+    width: 640px;
+    height: 96px;
+    background: url(../images/small_scrabble_holder.png);
+}
+[class^='holderSpace-']
+{
+        /*background-color: #F5F5F5; /* Light Grey */
+        text-align: center;
+        table-layout: fixed;
+}
+
+#version
+{
+    color: #C0C0C0; /* Light Grey */
+    text-align: center;
+}
+
