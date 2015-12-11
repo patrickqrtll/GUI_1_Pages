@@ -1,10 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- *
- * http://stackoverflow.com/questions/11590516/jquery-draggable-droppable-with-table
- * http://stackoverflow.com/questions/4959975/generate-random-value-between-two-numbers-in-javascript
+    File:  ~/public_html/js/scrabbleMovementJS.html
+    91.461 Assignment 9:  Scrabble
+    Author: Patrick Quaratiello, UMass Lowell, Patrick_Quaratiello@stundent.uml.edu
+    Created on November 29th 2015
+    JS for scrabble drag and drop functions
  */
 
 //All letter are A's for now. Also only letters A - O
